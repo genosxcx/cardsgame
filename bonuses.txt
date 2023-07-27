@@ -1,0 +1,53 @@
+BONUS CHALLENGE FORM
+--------------------
+
+For each bonus challenge you have implemented, please replace the sentence "We are not entitled to this bonus."
+with a short description of:
+
+1. How it was implemented in your code
+2. Where it was used (in which class methods).
+3. How you tested that it is working correctly.
+
+--------------------
+
+1. Fully supporting all configuration fields and avoiding the use of magic numbers
+
+we used configuration fields when needed and we didnt use any magic words 
+we used them in class delaer :
+    in the dealer constructor
+    method removeAllCardsFromTable
+we used them in class player:
+    method point()
+    method penalty()
+we used them in calss table:
+    in the table constructor
+    method placeCard()
+    method removeCard()
+    method removeCardd()
+we used it in class timeThread:
+    in the timeThread constructor
+    in method run()
+
+--------------------
+
+2. Terminating all threads (that you created) gracefully and in reverse order to the order they were created in.
+
+we did a reverse for loop in class dealer terminate() methods since the threads id is increased by
+1 everytime we create one, reverse for loop for the thread with the highest id(last created thread) to 0(first thread) so they are terminated in reversed order.
+
+--------------------
+
+3. Handling the config.turnTimeoutMillis value as follows:
+config.turnTimeoutMillis < 0: display nothing.
+config.turnTimeoutMillis = 0: display a timer since the last action (reshuffle or set collected).
+Note: in modes without a countdown timer the dealer must ensure there is always at least one legal set on the table.
+
+we created a class for the timer that handles the required bonus for the timer.
+
+--------------------
+
+4. Making sure that the threads do not wake up unless some actual job needs to be done (e.g., a value needs to be
+changed on the display, key input needs to be handled, etc.) and the only threads created by you are:
+1 thread per player + 1 additional thread for non-human players.
+
+We are not entitled to this bonus.
